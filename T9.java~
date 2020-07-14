@@ -1,0 +1,137 @@
+import java.util.*;
+import java.io.*;
+
+public class T9 {
+
+    public static int chartoInt(char onechar){
+        String tempresult;
+        switch (onechar){
+              case 'a':
+                tempresult="2";
+                break;
+              case 'b':
+                tempresult="22";
+                break;
+              case 'c':
+                tempresult="222";
+                break;
+              case 'd':
+                tempresult="3";
+                break;
+              case 'e':
+                tempresult="33";
+                break;
+              case 'f':
+                tempresult="333";
+                break;
+              case 'g':
+                tempresult="4";
+                break;
+              case 'h':
+                tempresult="44";
+                break;
+              case 'i':
+                tempresult="444";
+                break;
+              case 'j':
+                tempresult="5";
+                break;
+              case 'k':
+                tempresult="55";
+                break;
+              case 'l':
+                tempresult="555";
+                break;
+              case 'm':
+                tempresult="6";
+                break;
+              case 'n':
+                tempresult="66";
+                break;
+              case 'o':
+                tempresult="666";
+                break;
+              case 'p':
+                tempresult="7";
+                break;
+              case 'q':
+                tempresult="77";
+                break;
+              case 'r':
+                tempresult="777";
+                break;
+              case 's':
+                tempresult="7777";
+                break;
+              case 't':
+                tempresult="8";
+                break;
+              case 'u':
+               tempresult="88";
+                break;
+              case 'v':
+                tempresult="888";
+                break;
+              case 'w':
+                tempresult="9";
+                break;
+              case 'x':
+                tempresult="99";
+                break;
+              case 'y':
+                tempresult="999";
+                break;
+              case 'z':
+                tempresult="9999";
+                break;
+              case ' ':
+                tempresult="0";
+                break;
+        }
+    
+        return tempresult;
+    }
+
+
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+        int numofCase = Integer.parseInt(sc.nextLine());
+        
+
+        for (int i = 0; i<numofCase; i++){
+
+            String input = sc.nextLine();
+            String result="";
+            //System.out.print("Case #"+i+": ");
+            char currChar;
+            char nextChar;
+            String currChartonum;
+            String nextChartonum;
+
+
+            for (int idx = 1; idx<=input.length(); idx++){
+                currChar = input.charAt(idx-1);
+                nextChar = input.charAt(idx);
+                if ((idx-1) == input.length()-1){
+                    break;//fix the index problem
+                }
+                currChartonum = chartoInt(currChar);
+                nextChartonum = chartoInt(nextChar);
+                if (currChartonum.charAt(currChartonum.length()-1) == currChartonum.charAt(0)){
+                    result += currChartonum + " " + nextChartonum;
+                }
+                else{
+                    result += currChartonum + nextChartonum;
+                }
+
+            }
+            System.out.println("Case #"+(i+1)+": " + result);
+            
+        }
+        
+    }
+
+
+    
+}

@@ -1,0 +1,28 @@
+import java.util.*;
+import java.io.*;
+
+public class peasoup {
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    int numofres = Integer.parseInt(sc.nextline());
+    for (i=0;i<numofres;i++){
+      
+      int numofdish = Integer.parseInt(sc.nextline());
+      str resname = String.(sc.naxtline());
+      str[] menu = new str[numofdish];
+      for (j=0;j<numofdish;j++){
+        menu[j]=String.(sc.naxtline());
+      }
+      if menu.contains("pea soup") and menu.contains("pancakes"){
+        return resname
+      }
+      
+      
+    }
+    return ("Anywhere is fine I guess")
+    
+    
+      
+  }
+}
